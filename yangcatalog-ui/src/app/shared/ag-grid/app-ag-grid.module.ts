@@ -1,4 +1,4 @@
-import { ANALYZE_FOR_ENTRY_COMPONENTS, ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppAgGridComponent } from './app-ag-grid.component';
 import { AgCellTemplateRendererComponent } from './ag-cell-template-renderer/ag-cell-template-renderer.component';
@@ -19,10 +19,7 @@ import { FormsModule } from '@angular/forms';
 export class AppAgGridModule {
     static withComponents(components?: any): ModuleWithProviders<AppAgGridModule> {
         return {
-            ngModule: AppAgGridModule,
-            providers: [
-                {provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: components, multi: true}
-            ],
+            ngModule: AppAgGridModule
         };
     }
 }

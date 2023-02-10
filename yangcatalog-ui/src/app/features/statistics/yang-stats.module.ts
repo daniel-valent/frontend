@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbAlertModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { BarChartModule, PieChartModule } from '@swimlane/ngx-charts';
 import { CoreModule } from '../../core/core.module';
@@ -21,8 +20,7 @@ import { YangStatsComponent } from './yang-stats.component';
     BarChartModule,
     PieChartModule,
     AppAgGridModule,
-    FormsModule,
-    FontAwesomeModule
+    FormsModule
   ]
 })
 export class YangStatsModule { }

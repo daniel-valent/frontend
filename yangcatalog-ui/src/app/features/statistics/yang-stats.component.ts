@@ -1,6 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
-import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { ColDef, GridOptions } from 'ag-grid-community';
 import { Subject } from 'rxjs';
 import { YangStatsModel } from './models/yang-stats-model';
@@ -25,9 +23,6 @@ export class YangStatsComponent implements OnInit, OnDestroy {
 
   ciscoStandards = ['nx', 'xr', 'xe'];
   ciscoStatsSelection = 'nx';
-
-  faCheck = faCheck;
-  faTimes = faTimes;
 
   nxTemplateMap = {
     nexus9000: 'versionPlatformTemplate',

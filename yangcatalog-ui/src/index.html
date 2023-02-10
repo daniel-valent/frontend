@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
-<base href="/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" as="style" href="assets/styles.css">
-<link rel="stylesheet preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway" crossorigin>
-<link rel="stylesheet preload" as="style"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin>
-<script>
 
-  if (window.location.pathname.match('/yangcatalog-ui/[^/]+')) {
-    window['myBasePath'] = '/yangcatalog-ui';
-  } else {
-    window['myBasePath'] = '';
-  }
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" as="style" href="/assets/styles.css">
+  <link rel="stylesheet preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway" crossorigin>
+  <link rel="stylesheet preload" as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/fontawesome.css" crossorigin>
+  <script>
 
-</script>
+    if (window.location.pathname.match('/yangcatalog-ui/[^/]+')) {
+      window['myBasePath'] = '/yangcatalog-ui';
+    } else {
+      window['myBasePath'] = '';
+    }
 
-<style>
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif
-  }
+  </script>
 
-  body, html {
-    height: 100%;
-    line-height: 1.8;
-  }
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
 
-  .yc-top {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-  }
+    body,
+    html {
+      height: 100%;
+      line-height: 1.8;
+    }
 
-  .w3-bar .w3-button {
-    padding: 16px;
-  }
-</style>
+    .yc-top {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      top: 0;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+  </style>
+</head>
 
 <body>
 
