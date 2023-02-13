@@ -15,26 +15,25 @@ import { YangValidatorComponent } from './yang-validator.component';
 
 
 @NgModule({
-  declarations: [
-    YangValidatorComponent,
-    MissingModulesSelectionComponent,
-    ValidationResultComponent,
-    ValidationAlertComponent,
-    ApiOverviewComponent
-  ],
-  entryComponents: [MissingModulesSelectionComponent],
-  imports: [
-    CommonModule,
-    YangValidatorRoutingModule,
-    NgbTypeaheadModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgBootstrapFormValidationModule,
-    NgbAccordionModule,
-    NgbAlertModule,
-    FileUploadFormModule,
-    RouterModule,
-    CoreModule
-  ]
+    declarations: [
+        YangValidatorComponent,
+        MissingModulesSelectionComponent,
+        ValidationResultComponent,
+        ValidationAlertComponent,
+        ApiOverviewComponent
+    ],
+    imports: [
+        CommonModule,
+        YangValidatorRoutingModule,
+        NgbTypeaheadModule,
+        ReactiveFormsModule,
+        FormsModule,
+        NgBootstrapFormValidationModule,
+        NgbAccordionModule,
+        NgbAlertModule,
+        FileUploadFormModule,
+        RouterModule,
+        CoreModule
+    ]
 })
 export class YangValidatorModule { }

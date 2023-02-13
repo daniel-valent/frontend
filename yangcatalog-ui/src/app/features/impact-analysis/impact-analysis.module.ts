@@ -17,21 +17,20 @@ import { ImpactAnalysisComponent } from './impact-analysis.component';
 
 
 @NgModule({
-  declarations: [ImpactAnalysisComponent, ImpactAnalysisVisualisationComponent, NodeContextMenuComponent, ClusterContextMenuComponent, ImpactNodesListComponent, ImpactWarningsComponent],
-  entryComponents: [ImpactNodesListComponent, ImpactWarningsComponent],
-  providers: [PtTopologyService, ClusteringService],
-  imports: [
-    CommonModule,
-    ImpactAnalysisRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbAlertModule,
-    NgbNavModule,
-    TagInputModule,
-    NgbTypeaheadModule,
-    RouterModule,
-    CoreModule,
-    AppAgGridModule
-  ]
+    declarations: [ImpactAnalysisComponent, ImpactAnalysisVisualisationComponent, NodeContextMenuComponent, ClusterContextMenuComponent, ImpactNodesListComponent, ImpactWarningsComponent],
+    providers: [PtTopologyService, ClusteringService],
+    imports: [
+        CommonModule,
+        ImpactAnalysisRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbAlertModule,
+        NgbNavModule,
+        TagInputModule,
+        NgbTypeaheadModule,
+        RouterModule,
+        CoreModule,
+        AppAgGridModule
+    ]
 })
 export class ImpactAnalysisModule { }
