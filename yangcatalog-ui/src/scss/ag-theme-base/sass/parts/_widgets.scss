@@ -1,5 +1,5 @@
-
 @mixin ag-theme-base-part-widgets {
+
     .ag-checkbox,
     .ag-radio-button {
         .ag-input-wrapper {
@@ -45,13 +45,13 @@
         font-size: inherit;
         line-height: inherit;
         color: inherit;
-    
+
         @if ag-param-is-set(input-border-color) {
             border-width: 1px;
             border-style: solid;
             @include ag-color-property(border-color, input-border-color);
         }
-    
+
         &:disabled {
             @include ag-color-property(color, disabled-foreground-color);
             @include ag-color-property(background-color, input-disabled-background-color);
@@ -67,6 +67,7 @@
 
     input[class^='ag-'][type='number'] {
         -moz-appearance: textfield;
+
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -78,7 +79,8 @@
         padding: 0;
     }
 
-    input[class^='ag-'][type='button'], button[class^='ag-'] {
+    input[class^='ag-'][type='button'],
+    button[class^='ag-'] {
         &:focus {
             box-shadow: ag-param(input-focus-box-shadow);
         }
@@ -91,7 +93,8 @@
     ////////////////////////////////////////
     // Lists
     ////////////////////////////////////////
-    .ag-list-item, .ag-virtual-list-item {
+    .ag-list-item,
+    .ag-virtual-list-item {
         height: ag-param(list-item-height);
     }
 
@@ -104,6 +107,7 @@
     .ag-list-item {
         display: flex;
         align-items: center;
+
         &.ag-active-item {
             @include ag-color-property(background-color, row-hover-color);
         }
@@ -114,6 +118,7 @@
         padding-right: 4px;
         cursor: default;
         @include ag-selectable(none);
+
         span {
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -128,16 +133,19 @@
             height: ag-param(list-item-height);
             cursor: default;
         }
+
         .ag-picker-field-display {
             margin: 4px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         .ag-picker-field-icon {
             display: flex;
             align-items: center;
         }
+
         &.ag-disabled {
             opacity: 0.5;
         }
@@ -159,7 +167,7 @@
     .ag-rich-select-value {
         padding: 0 ag-param(grid-size) 0 ag-param(cell-horizontal-padding);
         height: ag-param(row-height);
-        
+
         @include ag-border(secondary, bottom);
     }
 
@@ -189,12 +197,12 @@
     .ag-selection-checkbox,
     .ag-group-expanded,
     .ag-group-contracted {
-        @include ag-theme-rtl(( margin-right: ag-param(cell-widget-spacing) ));
+        @include ag-theme-rtl((margin-right: ag-param(cell-widget-spacing)));
 
         @include ag-color-property(color, secondary-foreground-color);
     }
 
-    .ag-cell-wrapper > *:not(.ag-cell-value):not(.ag-group-value) {
+    .ag-cell-wrapper>*:not(.ag-cell-value):not(.ag-group-value) {
         height: ag-param(row-height) - 2px; // - 2px to remove effect of cell borders
         display: flex;
         align-items: center;
@@ -205,32 +213,33 @@
     .ag-group-contracted {
         cursor: pointer;
     }
-    
+
     .ag-group-title-bar-icon {
         cursor: pointer;
         flex: none;
         @include ag-color-property(color, secondary-foreground-color);
     }
-    
+
     .ag-group-child-count {
-        @include ag-theme-rtl(( margin-left: 2px ));
+        @include ag-theme-rtl((margin-left: 2px));
     }
 
     .ag-group-title-bar {
         @include ag-color-property(background-color, subheader-background-color);
         padding: ag-param(grid-size);
     }
-    
+
     .ag-group-toolbar {
         padding: ag-param(grid-size);
     }
 
-    .ag-disabled-group-title-bar, .ag-disabled-group-container {
+    .ag-disabled-group-title-bar,
+    .ag-disabled-group-container {
         opacity: 0.5
     }
 
     .group-item {
-        margin: ag-param(grid-size) / 2 0;
+        margin: calc(ag-param(grid-size) / 2) 0;
     }
 
     .ag-label {
@@ -239,7 +248,7 @@
     }
 
     .ag-label-align-top .ag-label {
-        margin-bottom: ag-param(grid-size) / 2;
+        margin-bottom: calc(ag-param(grid-size) / 2);
     }
 
     .ag-slider-field,
@@ -255,6 +264,7 @@
         @include ag-color-property(border-color, border-color);
         @include ag-color-property(background-color, background-color);
     }
+
     .ag-angle-select-child-circle {
         top: 4px;
         left: 12px;
@@ -270,11 +280,12 @@
         border: 1px solid;
         @include ag-color-property(border-color, border-color);
         border-radius: 5px;
+
         &:focus {
             box-shadow: ag-param(input-focus-box-shadow);
         }
     }
-    
+
     .ag-picker-field-button {
         @include ag-color-property(background-color, background-color);
         @include ag-color-property(color, secondary-foreground-color);
@@ -343,9 +354,11 @@
 
     .ag-recent-color {
         margin: 0 3px;
+
         &:first-child {
             margin-left: 0;
         }
+
         &:last-child {
             margin-right: 0;
         }
@@ -428,7 +441,7 @@
     }
 
     // Column select
-    
+
     @for $i from 1 to 10 {
         .ag-column-select-indent-#{$i} {
             @include ag-theme-rtl((padding-left: $i * ag-param(column-select-indent-size)));
@@ -468,7 +481,7 @@
     // note - this applies a margin of the same width as a .ag-column-group-icons element, to indent columns
     // wihtout icons to the same level as siblings with icons. If changing .ag-column-group-icons, change this too.
     .ag-column-select-add-group-indent {
-        @include ag-theme-rtl(( margin-left: ag-param(icon-size) + ag-param(grid-size) * 2 ));
+        @include ag-theme-rtl((margin-left: ag-param(icon-size) + ag-param(grid-size) * 2));
     }
 
     .ag-column-select-list {
@@ -490,16 +503,19 @@
             @include ag-checkbox;
         }
     }
+
     @if not map-has-key($type-map, toggle-button) or map-get($type-map, toggle-button) {
         .ag-toggle-button-input-wrapper {
             @include ag-toggle-button;
         }
     }
+
     @if not map-has-key($type-map, radio) or map-get($type-map, radio) {
         .ag-radio-button-input-wrapper {
             @include ag-radio;
         }
     }
+
     @if not map-has-key($type-map, range) or map-get($type-map, range) {
         input[class^='ag-'][type='range'] {
             @include ag-range;
@@ -513,7 +529,8 @@
     width: ag-param(icon-size);
     height: ag-param(icon-size);
 
-    & input, input {
+    & input,
+    input {
         -webkit-appearance: none;
         opacity: 0;
         width: 100%;
@@ -525,12 +542,13 @@
     display: inline-block;
     vertical-align: middle;
     flex: none;
-    
-    &:focus-within, &:active {
+
+    &:focus-within,
+    &:active {
         outline: none;
         box-shadow: ag-param(input-focus-box-shadow);
     }
-    
+
     &.ag-disabled {
         opacity: 0.5;
     }
@@ -574,7 +592,7 @@
 
 @mixin ag-radio {
     @include ag-check-button-base();
-    
+
     border-radius: ag-param(icon-size);
 
     &::after {
@@ -602,7 +620,7 @@
     width: ag-param(toggle-button-width);
     height: ag-param(toggle-button-height);
     @include ag-color-property(background-color, toggle-button-off-background-color);
-    border-radius: ag-param(toggle-button-height) / 2;
+    border-radius: calc(ag-param(toggle-button-height) / 2);
     position: relative;
     flex: none;
     border: $border-width solid;
@@ -638,14 +656,14 @@
         height: ag-param(toggle-button-height);
         width: ag-param(toggle-button-height);
         @include ag-color-property(background-color, toggle-button-switch-background-color);
-        border-radius: ag-param(toggle-button-height) / 2;
+        border-radius: calc(ag-param(toggle-button-height) / 2);
         transition: left 100ms;
         border: $border-width solid;
         @include ag-color-property(border-color, toggle-button-switch-border-color);
     }
 
     &.ag-checked::before {
-        left: calc(100% - #{ag-param(toggle-button-height)} );
+        left: calc(100% - #{ag-param(toggle-button-height)});
         @include ag-color-property(border-color, toggle-button-on-border-color);
     }
 }
@@ -654,6 +672,7 @@
     @if mixin-exists(ag-range-track) {
         @include ag-range-track
     }
+
     @else {
         margin: 0;
         padding: 0;
@@ -675,6 +694,7 @@
     @if mixin-exists(ag-focus-range-track) {
         @include ag-focus-range-track
     }
+
     @else {
         @include ag-color-property(background-color, input-focus-border-color);
     }
@@ -684,6 +704,7 @@
     @if mixin-exists(ag-range-thumb) {
         @include ag-range-thumb
     }
+
     @else {
         margin: 0;
         padding: 0;
@@ -699,9 +720,11 @@
 
 @mixin ag-internal-focus-range-thumb {
     box-shadow: ag-param(input-focus-box-shadow);
+
     @if mixin-exists(ag-focus-range-thumb) {
         @include ag-focus-range-thumb
     }
+
     @else {
         @include ag-color-property(border-color, checkbox-checked-color);
     }
@@ -742,6 +765,7 @@
     &::-ms-thumb {
         @include ag-internal-range-thumb;
     }
+
     &::-moz-ag-range-thumb {
         @include ag-internal-range-thumb;
     }
@@ -752,9 +776,11 @@
         &::-webkit-slider-runnable-track {
             @include ag-internal-focus-range-track;
         }
+
         &::-moz-ag-range-track {
             @include ag-internal-focus-range-track;
         }
+
         &::-ms-track {
             @include ag-internal-focus-range-track;
         }
@@ -762,9 +788,11 @@
         &::-webkit-slider-thumb {
             @include ag-internal-focus-range-thumb;
         }
+
         &::-ms-thumb {
             @include ag-internal-focus-range-thumb;
         }
+
         &::-moz-ag-range-thumb {
             @include ag-internal-focus-range-thumb;
         }
@@ -774,9 +802,11 @@
         &::-webkit-slider-runnable-track {
             @include ag-internal-active-range-track;
         }
+
         &::-moz-ag-range-track {
             @include ag-internal-active-range-track;
         }
+
         &::-ms-track {
             @include ag-internal-active-range-track;
         }
@@ -784,9 +814,11 @@
         &::-webkit-slider-thumb {
             @include ag-internal-active-range-thumb;
         }
+
         &::-ms-thumb {
             @include ag-internal-active-range-thumb;
         }
+
         &::-moz-ag-range-thumb {
             @include ag-internal-active-range-thumb;
         }

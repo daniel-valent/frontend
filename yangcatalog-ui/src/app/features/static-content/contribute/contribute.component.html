@@ -6,15 +6,17 @@
       <p>How would you like to contribute to the YANG Catalog? I would like to:</p>
       <ul>
         <li><a href="{{myBasePath}}/contribute.html#addModelMetadata">As a Standards Development Organization (SDO), an
-          open source project, or an organization such as a vendor that creates proprietary models, I would like to add
-          metadata for my module to the YANG Catalog.</a></li>
+            open source project, or an organization such as a vendor that creates proprietary models, I would like to
+            add
+            metadata for my module to the YANG Catalog.</a></li>
         <li><a href="{{myBasePath}}/contribute.html#addImplementationMetadata">As a vendor that implements YANG models,
-          I would like to provide my implementation metadata.</a>
+            I would like to provide my implementation metadata.</a>
         </li>
         <li><a href="{{myBasePath}}/contribute.html#deleteModelMetadata">As a previously contributor, I would like to
-          delete my module metadata.</a></li>
-        <li><a href="{{myBasePath}}/contribute.html#contributeCodePowering">As an individual, I would like to contribute or
-          improve the code powering the YANG Catalog.</a></li>
+            delete my module metadata.</a></li>
+        <li><a href="{{myBasePath}}/contribute.html#contributeCodePowering">As an individual, I would like to contribute
+            or
+            improve the code powering the YANG Catalog.</a></li>
 
       </ul>
 
@@ -43,7 +45,7 @@
           Use an HTTP PUT request to
           <a href="https://yangcatalog.org/api/modules">https://yangcatalog.org/api/modules</a> with a JSON payload
           modeled after the <a
-          href="https://raw.githubusercontent.com/xorrkaz/netmod-yang-catalog/master/module-metadata.yang">model-metadata.yang</a>
+            href="https://raw.githubusercontent.com/xorrkaz/netmod-yang-catalog/master/module-metadata.yang">model-metadata.yang</a>
           model (current revision: 2017-07-27). Note, this module requires the
           <a href="https://raw.githubusercontent.com/xorrkaz/netmod-yang-catalog/master/yang-catalog.yang">yang-catalog
             module</a>. The module-metadata.yang has the following tree structure: <br>
@@ -105,10 +107,9 @@
           </pre>
         </li>
         <li>
-          Perform an HTTP GET request to <strong>https://yangcatalog.org/api/job/{{{job_id}</strong> to get the status of the
-          job. The
-          job
-          result will remain "In progress" until the job completes. When the job has completed, you will receive either
+          Perform an HTTP GET request to <strong>https://yangcatalog.org/api/job/&#123;job_id&#125;</strong> to get the
+          status of the job. The job result will remain "In progress" until the job completes. When the job has
+          completed, you will receive either
           a "Finished" (on success) or "Failed" (on failure) result. Reason will remain null if the result is other then
           "Failed”. Otherwise it will give information on why it failed. For example, after obtaining the job ID above,
           perform an HTTP GET to https://yangcatalog.org/api/job/88bd8c4c-8809-4de8-85c8-39d522d4bcdf to get the current
@@ -125,7 +126,7 @@
         </li>
         <li>
           Once the job has completed successfully, test the result by querying the <a
-          href="{{myBasePath}}/contribute.html#model_get">search API</a>.
+            href="{{myBasePath}}/contribute.html#model_get">search API</a>.
         </li>
         <li>
           Contact <a href="mailto:info@yangcatalog.org">info@yangcatalog.org</a> if you run into problems.
@@ -154,7 +155,8 @@
           Once the account is requested, wait until confirmation before proceeding.
         </li>
         <li>
-          Use an HTTP PUT request to <a href="https://yangcatalog.org/api/platforms">https://yangcatalog.org/api/platforms</a>
+          Use an HTTP PUT request to <a
+            href="https://yangcatalog.org/api/platforms">https://yangcatalog.org/api/platforms</a>
           with a JSON payload modeled after the
           <a
             href="https://raw.githubusercontent.com/xorrkaz/netmod-yang-catalog/master/platform-implementation-metadata.yang">platform-implementation-metadata.yang</a>
@@ -223,7 +225,9 @@
           </pre>
         </li>
         <li>
-          Perform an HTTP GET request to <strong>https://yangcatalog.org/api/job/{job_id}</strong> to get the status of the job.
+          Perform an HTTP GET request to <strong>https://yangcatalog.org/api/job/&#123;job_id&#125;</strong> to get the
+          status of
+          the job.
           The job
           result will remain "In progress" until the job completes. When the job has completed you will receive either a
           "Finished" (on success) or "Failed" (on failure) result. For example, after obtaining the job ID above,
@@ -241,7 +245,7 @@
         </li>
         <li>
           Once the job has completed successfully, test the result by querying the <a
-          href="{{myBasePath}}/contribute.html#model_get">search API</a>.
+            href="{{myBasePath}}/contribute.html#model_get">search API</a>.
         </li>
         <li>
           Contact <a href="mailto:info@yangcatalog.org">info@yangcatalog.org</a> if you run into problems.
@@ -264,11 +268,12 @@
         </li>
         <li>
           Use an HTTP DELETE request to delete specific module:
-          <strong>https://yangcatalog.org/api/modules/module/{name},{revision},{organization}</strong>
+          <strong>https://yangcatalog.org/api/modules/module/&#123;name&#125;,&#123;revision&#125;,&#123;organization&#125;</strong>
         </li>
         <li>
           Use an HTTP DELETE request to delete modules on specific implementation metadata
-          <strong> https://yangcatalog.org/api/vendors/vendor/{name}</strong>. You can continue deeper on the vendors
+          <strong> https://yangcatalog.org/api/vendors/vendor/&#123;name&#125;</strong>. You can continue deeper on the
+          vendors
           branch up to software-flavor
         </li>
       </ol>
@@ -280,22 +285,30 @@
       <p>
         All of the code behind <a href="https://yangcatalog.org/">yangcatalog.org</a> is open source, maintained in
         multiple <a href="https://github.com/">GitHub</a> repositories. If you are
-        interested in contributeing the code that directly drives the YANG Catalog, pick your repository from the list below:
+        interested in contributeing the code that directly drives the YANG Catalog, pick your repository from the list
+        below:
       </p>
       <ul>
-        <li>YANG Catalog API and backend in <a href="https://github.com/YangCatalog/backend">https://github.com/YangCatalog/backend</a>
+        <li>YANG Catalog API and backend in <a
+            href="https://github.com/YangCatalog/backend">https://github.com/YangCatalog/backend</a>
         </li>
-        <li>YANG Catalog Regex validator in <a href="https://github.com/YangCatalog/yangre">https://github.com/YangCatalog/yangre</a>
+        <li>YANG Catalog Regex validator in <a
+            href="https://github.com/YangCatalog/yangre">https://github.com/YangCatalog/yangre</a>
         </li>
-        <li>YANG Catalog static web pages in <a href="https://github.com/YangCatalog/web_root">https://github.com/YangCatalog/web_root</a>
+        <li>YANG Catalog static web pages in <a
+            href="https://github.com/YangCatalog/web_root">https://github.com/YangCatalog/web_root</a>
         </li>
-        <li>YANG Models in the vendor and standard directories<a href="https://github.com/YangModels/yang/">https://github.com/YangModels/yang/</a>
+        <li>YANG Models in the vendor and standard directories<a
+            href="https://github.com/YangModels/yang/">https://github.com/YangModels/yang/</a>
         </li>
-        <li>YANG Catalog and related API models in <a href="https://github.com/xorrkaz/netmod-yang-catalog">https://github.com/xorrkaz/netmod-yang-catalog</a>
+        <li>YANG Catalog and related API models in <a
+            href="https://github.com/xorrkaz/netmod-yang-catalog">https://github.com/xorrkaz/netmod-yang-catalog</a>
         </li>
-        <li>Capabilities and metadata generation scripts in <a href="https://github.com/einarnn/ncc">https://github.com/einarnn/ncc</a>
+        <li>Capabilities and metadata generation scripts in <a
+            href="https://github.com/einarnn/ncc">https://github.com/einarnn/ncc</a>
         </li>
-        <li>ConfD (not Open Source) is at <a href="https://developer.cisco.com/site/confD/">https://developer.cisco.com/site/confD/</a>
+        <li>ConfD (not Open Source) is at <a
+            href="https://developer.cisco.com/site/confD/">https://developer.cisco.com/site/confD/</a>
         </li>
       </ul>
       <p>

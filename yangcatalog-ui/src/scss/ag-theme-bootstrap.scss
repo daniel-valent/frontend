@@ -9,25 +9,23 @@ $ag-icon-font-family: 'agGridClassic';
 @import 'ag-theme-base/sass/ag-theme-base.scss';
 
 .ag-theme-bootstrap {
-  @include ag-theme-base((
-    "borders": false,
-    "foreground-color": #000,
-    "background-color": #FFF,
-    "odd-row-background-color": #F2F2F2,
-    "input-disabled-background-color": #ebebeb,
-    "border-color": darkgrey,
-    "chip-background-color": #ecf0f1,
-    "header-cell-moving-background-color": #bebebe,
-    "control-panel-background-color": #f6f6f6,
-    "range-selection-highlight-color": rgba(#8F8, 0.4),
-    "value-change-delta-up-color": darkgreen,
-    "value-change-delta-down-color": darkred,
-    "value-change-value-highlight-background-color": #cec,
-    "input-border-color": #000,
-    "row-border-color": null,
-    "subheader-background-color": #ececec,
-    "selected-row-background-color": #bde2e5
-  ));
+  @include ag-theme-base(("borders": false,
+      "foreground-color": #000,
+      "background-color": #FFF,
+      "odd-row-background-color": #F2F2F2,
+      "input-disabled-background-color": #ebebeb,
+      "border-color": darkgrey,
+      "chip-background-color": #ecf0f1,
+      "header-cell-moving-background-color": #bebebe,
+      "control-panel-background-color": #f6f6f6,
+      "range-selection-highlight-color": rgba(#8F8, 0.4),
+      "value-change-delta-up-color": darkgreen,
+      "value-change-delta-down-color": darkred,
+      "value-change-value-highlight-background-color": #cec,
+      "input-border-color": #000,
+      "row-border-color": null,
+      "subheader-background-color": #ececec,
+      "selected-row-background-color": #bde2e5));
 
   .ag-icon {
     color: #333;
@@ -54,10 +52,12 @@ $ag-icon-font-family: 'agGridClassic';
     color: rgba(0, 0, 0, 0.38);
     opacity: 0.38;
   }
+
   .ag-paging-page-summary-panel .ag-icon {
     width: 18px;
     height: 18px;
   }
+
   .ag-paging-page-summary-panel span {
     margin: 0 8px;
   }
@@ -65,6 +65,7 @@ $ag-icon-font-family: 'agGridClassic';
   .ag-paging-page-summary-panel .ag-paging-button.ag-disabled button {
     cursor: default;
   }
+
   .ag-paging-page-summary-panel .ag-paging-button button {
     cursor: pointer;
     opacity: 0;
@@ -74,6 +75,7 @@ $ag-icon-font-family: 'agGridClassic';
     left: 0;
     padding: 0;
   }
+
   .ag-paging-page-summary-panel .ag-paging-button button {
     position: absolute;
   }
@@ -129,7 +131,7 @@ $ag-icon-font-family: 'agGridClassic';
   }
 
   .ag-tabs-body {
-    margin: ag-param(grid-size) / 2 0;
+    margin: calc(ag-param(grid-size) / 2) 0;
   }
 
   .ag-icon {
@@ -177,9 +179,11 @@ $ag-icon-font-family: 'agGridClassic';
     margin-top: ag-param(grid-size);
     margin-left: ag-param(grid-size);
   }
+
   .ag-column-drop-vertical-title {
     margin-left: ag-param(grid-size);
   }
+
   .ag-column-drop-vertical-empty-message {
     margin-left: ag-param(grid-size) * 3 + ag-param(icon-size)
   }

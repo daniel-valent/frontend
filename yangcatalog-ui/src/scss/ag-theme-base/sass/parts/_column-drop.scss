@@ -1,4 +1,3 @@
-
 @mixin ag-theme-base-part-column-drop {
 
     // CELL (SHARED)
@@ -7,7 +6,7 @@
         @include ag-color-property(background, chip-background-color);
         border-radius: ag-param(grid-size) * 4;
         height: ag-param(grid-size) * 4;
-        padding: 0 ag-param(grid-size) / 2;
+        padding: 0 calc(ag-param(grid-size) / 2);
     }
 
     .ag-column-drop-cell-text {
@@ -17,10 +16,10 @@
     .ag-column-drop-cell-button {
         min-width: ag-param(grid-size) * 4;
 
-        margin: 0 ag-param(grid-size) / 2;
+        margin: 0 calc(ag-param(grid-size) / 2);
         @include ag-color-property(color, secondary-foreground-color);
     }
-    
+
     .ag-column-drop-cell-drag-handle {
         margin-left: ag-param(grid-size) * 2;
     }
@@ -30,16 +29,16 @@
     }
 
     // HORIZONTAL COLUMN DROP
-    
+
     .ag-column-drop-horizontal {
         @include ag-color-property(background-color, control-panel-background-color);
         @include ag-color-property(color, secondary-foreground-color);
         height: ag-param(row-height);
         @include ag-border(primary, bottom);
 
-        @include ag-theme-rtl(( padding-left: ag-param(cell-horizontal-padding) ));
+        @include ag-theme-rtl((padding-left: ag-param(cell-horizontal-padding)));
     }
-    
+
     .ag-column-drop-horizontal-half-width:not(:last-child) {
         @if ag-param(borders) {
             @include ag-theme-rtl((border-right: solid 1px), $color-param: border-color);
@@ -56,7 +55,7 @@
     }
 
     .ag-column-drop-horizontal-icon {
-        @include ag-theme-rtl(( margin-right: ag-param(cell-horizontal-padding) ));
+        @include ag-theme-rtl((margin-right: ag-param(cell-horizontal-padding)));
     }
 
     // VERTICAL COLUMN DROP
@@ -74,8 +73,9 @@
     .ag-column-drop-vertical {
         min-height: 50px;
         max-height: 150px;
-        
+
         @include ag-border(secondary, bottom);
+
         &.ag-last-column-drop {
             @include ag-border(secondary, bottom, $none: true);
         }
