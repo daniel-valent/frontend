@@ -37,7 +37,9 @@
 }
 
 .private-header {
-  h2, h3 {
+
+  h2,
+  h3 {
     display: inline;
   }
 
@@ -176,6 +178,7 @@
 
     ::ng-deep ngx-charts-legend {
       width: 400px;
+
       div {
         width: 400px;
       }

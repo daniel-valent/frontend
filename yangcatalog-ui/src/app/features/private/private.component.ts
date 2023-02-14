@@ -99,6 +99,7 @@ export class PrivateComponent implements OnInit, OnDestroy {
 
 
   defaultColDef = {
+    wrapText: true,
     autoHeight: true,
     resizable: false,
     sortable: true,

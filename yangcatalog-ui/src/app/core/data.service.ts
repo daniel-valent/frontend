@@ -23,7 +23,7 @@ export class DataService {
     return this.customGet(restURI)
       .pipe(
         map(
-          // tslint:disable-next-line:ban-types
+          // eslint-disable-next-line @typescript-eslint/ban-types
           (arrayData: Object[]) => arrayData.map((modelData: Object) => new modelType(modelData))
         )
       );
@@ -41,7 +41,7 @@ export class DataService {
               }
             });
             if (wrapperSubObj && wrapperSubObj.length > 0) {
-              // tslint:disable-next-line:ban-types
+              // eslint-disable-next-line @typescript-eslint/ban-types
               return wrapperSubObj.map((modelData: Object) => new modelType(modelData));
             } else {
               return [];
@@ -62,13 +62,13 @@ export class DataService {
   /**
    * Can be used when as a response is expected array of data objects, which should be converted to models objects
    */
-  // tslint:disable-next-line:ban-types
+  // eslint-disable-next-line @typescript-eslint/ban-types
   protected getListOfModelsWithPostMethod<T>(restURI: string, modelType: { new(value: any): T; }, dataObject: Object): Observable<T[]> {
     return this.httpClient
       .post(environment.REST_BASE_URL + restURI, dataObject, { withCredentials: true })
       .pipe(
         map(
-          // tslint:disable-next-line:ban-types
+          // eslint-disable-next-line @typescript-eslint/ban-types
           (arrayData: Object[]) => arrayData.map((modelData: Object) => new modelType(modelData))
         )
       );
@@ -109,7 +109,7 @@ export class DataService {
   /**
    * Common http post with added credentials
    */
-  // tslint:disable-next-line:ban-types
+  // eslint-disable-next-line @typescript-eslint/ban-types
   protected post<T>(restURI: string, dataObject: Object): Observable<any> {
     return this.httpClient
       .post(environment.REST_BASE_URL + restURI, dataObject, { withCredentials: true });

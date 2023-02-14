@@ -20,7 +20,7 @@ import {
   RowNode
 } from 'ag-grid-community';
 import { AgCellTemplateRendererComponent } from './ag-cell-template-renderer/ag-cell-template-renderer.component';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { AppUtilsService } from '../../core/app-utils.service';
 
 @Component({

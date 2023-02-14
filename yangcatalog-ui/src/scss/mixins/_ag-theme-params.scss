@@ -299,7 +299,7 @@ $-ag-params: null !default;
 @function -ag-operator-function-divide($params, $lhs, $rhs) {
     $lhs: -ag-require-type($lhs, "number", "value before $divide");
     $rhs: -ag-require-type($rhs, "number", "argument to $divide");
-    @return $lhs / $rhs;
+    @return calc($lhs / $rhs);
 }
 
 @function -ag-operator-function-plus($params, $lhs, $rhs) {

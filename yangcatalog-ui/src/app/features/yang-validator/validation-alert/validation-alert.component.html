@@ -1,5 +1,5 @@
 <div *ngIf="alert">
-    <div *ngIf="alert.type == 'info'; then infoBlock else dangerBlock"></div>
+    <div *ngIf="alert.type === 'info'; then infoBlock else dangerBlock"></div>
 
     <ng-template #dangerBlock>
         <ngb-alert type="danger" (close)="onCloseAlert()">{{ alert.message || 'The application
