@@ -1,8 +1,12 @@
 ## Frontend Release Notes
 
-* ##### v5.15.0 - 2023-10-04
+* ##### v5.16.0 - 2023-11-08
 
   * Added fix for Impact Analysis page internal server error [#38](https://github.com/YangCatalog/frontend/issues/38)
+  * Changed footer of the page to clarify how to open issues [#40](https://github.com/YangCatalog/frontend/issues/40)
+
+* ##### v5.15.0 - 2023-10-04
+
   * Updated yanglint to 2.1.111
   
 * ##### v5.14.0 - 2023-08-09
